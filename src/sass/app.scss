@@ -1,6 +1,88 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,500,700");
 
 @import "settings/bootstrap-variables";
 
 @import '~bootstrap/scss/bootstrap';
+
+//@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+//@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+ul.tags {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    zoom: 1;
+}
+
+ul.tags li {
+    float: left;
+    padding: 5px 18px;
+    background-color: #f1f5f7;
+    margin-right: 3px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+ul.tags:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    opacity: .4;
+    transition: opacity .2s ease-in-out;
+}
+
+.icon:hover {
+    opacity: .9;
+}
+
+.contact-icon {
+    background-image: url('/img/mail.svg');
+    background-repeat: no-repeat;
+}
+
+.download-icon {
+    background-image: url('/img/pdf.svg');
+    background-repeat: no-repeat;
+}
+
+.header-btn {
+    @extend .d-flex;
+    @extend .align-items-center;
+    cursor: pointer;
+    margin-right: 20px;
+    
+    &.last {
+        margin-right: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-right: 30px;
+        
+        &.last {
+            margin-right: 10px;
+        }
+    }
+}
+
+.header-btns {
+    @extend .d-flex;
+    padding-top: 1rem;
+    justify-content: flex-start;
+
+    @include media-breakpoint-up(sm) {
+        padding-top: 0;
+        justify-content: flex-end;
+    }
+}
+
+ul {
+    font-size: 0.9375rem;
+}
