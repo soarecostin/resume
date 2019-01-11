@@ -17352,11 +17352,6 @@ try {
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip({// trigger: 'click'
-  });
-});
-
 /***/ }),
 
 /***/ "./src/sass/app.scss":

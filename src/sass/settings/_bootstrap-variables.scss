@@ -4,6 +4,7 @@ $body-bg: #fff;
 
 // Typography
 $font-family-default:
+    "Nunito",
     // Safari for OS X and iOS (San Francisco)
     -apple-system,
     // Chrome < 56 for OS X (San Francisco)
@@ -19,7 +20,7 @@ $font-family-default:
 
 
 $font-family-base:
-    "Lato",
+    "Nunito",
     // Safari for OS X and iOS (San Francisco)
     -apple-system,
     // Chrome < 56 for OS X (San Francisco)
@@ -35,7 +36,7 @@ $font-family-base:
 
 
 $font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$line-height-base: 1.5;
 
 $theme-colors: (
   "main": #594c82,
@@ -43,5 +44,6 @@ $theme-colors: (
   "white": #fff
 );
 
-$component-active-bg: rgb(231, 78, 132);
-$dropdown-link-hover-color: rgb(231, 78, 132);
+$colors: (
+  "blue": #39c
+);

@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Lato:300,500,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
 
 @import "settings/bootstrap-variables";
 
@@ -24,6 +24,7 @@ ul.tags li {
     margin-right: 3px;
     margin-bottom: 12px;
     font-size: 14px;
+    font-weight: 300;
 }
 
 ul.tags:after {
@@ -33,6 +34,7 @@ ul.tags:after {
 }
 
 .icon {
+    display: block;
     width: 30px;
     height: 30px;
     opacity: .4;
@@ -43,6 +45,11 @@ ul.tags:after {
     opacity: .9;
 }
 
+.icon-sm {
+    width: 12px;
+    height: 12px;
+}
+
 .contact-icon {
     background-image: url('/img/mail.svg');
     background-repeat: no-repeat;
@@ -51,6 +58,31 @@ ul.tags:after {
 .download-icon {
     background-image: url('/img/pdf.svg');
     background-repeat: no-repeat;
+}
+
+.phone-icon {
+    background-image: url('/img/smartphone.svg');
+    background-repeat: no-repeat;
+}
+
+.link-icon {
+    background-image: url('/img/right-up.svg');
+    background-repeat: no-repeat;
+}
+
+.external-link {
+    &:after {
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        @extend .icon;
+        @extend .icon-sm;
+        @extend .link-icon;
+    }
+}
+
+.external-link .icon {
+    margin-left: 5px;
 }
 
 .header-btn {
@@ -84,5 +116,45 @@ ul.tags:after {
 }
 
 ul {
-    font-size: 0.9375rem;
+    font-size: 1rem;
+}
+
+a {
+    color: rgb(47, 171, 233);
+}
+  
+a:hover {
+    text-decoration: none;
+}
+
+.link-unstyled {
+    &,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:hover {
+      font-style: inherit;
+      color: inherit;
+      background-color: transparent;
+      font-size: inherit;
+      text-decoration: none;
+      font-variant: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      font-family: inherit;
+      border-radius: inherit;
+      border: inherit;
+      outline: inherit;
+      box-shadow: inherit;
+      padding: inherit;
+      vertical-align: inherit;
+    }
+}
+
+.subtitle {
+    @extend .font-weight-bold;
+    @extend .text-uppercase;
+    color: #c9cccf;
+    letter-spacing: 1.2px;
 }
