@@ -1,155 +1,35 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
 
-@import "settings/bootstrap-variables";
+@tailwind base;
 
-@import '~bootstrap/scss/bootstrap';
+@tailwind components;
 
-ul.tags {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    zoom: 1;
-}
+@tailwind utilities;
 
-ul.tags li {
-    float: left;
-    padding: 5px 18px;
-    background-color: #f1f5f7;
-    margin-right: 3px;
-    margin-bottom: 12px;
-    font-size: 14px;
-    font-weight: 300;
-}
-
-ul.tags:after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.icon {
-    display: block;
-    width: 30px;
-    height: 30px;
-    opacity: .4;
+.transition-opacity-fast {
     transition: opacity .2s ease-in-out;
 }
 
-.icon:hover {
-    opacity: .9;
+.subtitle {
+    @apply font-bold uppercase text-gray-400 tracking-wide;
 }
 
-.icon-sm {
-    width: 12px;
-    height: 12px;
-}
-
-.contact-icon {
-    background-image: url('/img/mail.svg');
-    background-repeat: no-repeat;
-}
-
-.download-icon {
-    background-image: url('/img/pdf.svg');
-    background-repeat: no-repeat;
-}
-
-.phone-icon {
-    background-image: url('/img/smartphone.svg');
-    background-repeat: no-repeat;
-}
-
-.link-icon {
-    background-image: url('/img/right-up.svg');
-    background-repeat: no-repeat;
+ul.tags li {
+    @apply mr-1 mb-3 px-5 py-2 text-sm font-light bg-gray-200;
 }
 
 .external-link {
     &:after {
+        @apply inline-block w-4 h-4 ml-2 bg-no-repeat;
+        background-image: url('/img/right-up.svg');
         content: "";
-        display: inline-block;
-        margin-left: 5px;
-        @extend .icon;
-        @extend .icon-sm;
-        @extend .link-icon;
     }
 }
 
-.external-link .icon {
-    margin-left: 5px;
-}
-
-.header-btn {
-    @extend .d-flex;
-    @extend .align-items-center;
-    cursor: pointer;
-    margin-right: 20px;
-    
-    &.last {
-        margin-right: 0;
+.visible-link {
+    @apply text-blue-500;
+    &:hover {
+        @apply text-blue-700;
     }
-
-    @include media-breakpoint-up(sm) {
-        margin-right: 30px;
-        
-        &.last {
-            margin-right: 10px;
-        }
-    }
-}
-
-.header-btns {
-    @extend .d-flex;
-    padding-top: 1rem;
-    justify-content: flex-start;
-
-    @include media-breakpoint-up(sm) {
-        padding-top: 0;
-        justify-content: flex-end;
-    }
-}
-
-ul {
-    font-size: 1rem;
-}
-
-a {
-    color: rgb(47, 171, 233);
-}
-  
-a:hover {
-    text-decoration: none;
-}
-
-.link-unstyled {
-    &,
-    &:visited,
-    &:hover,
-    &:active,
-    &:focus,
-    &:active:hover {
-      font-style: inherit;
-      color: inherit;
-      background-color: transparent;
-      font-size: inherit;
-      text-decoration: none;
-      font-variant: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      font-family: inherit;
-      border-radius: inherit;
-      border: inherit;
-      outline: inherit;
-      box-shadow: inherit;
-      padding: inherit;
-      vertical-align: inherit;
-    }
-}
-
-.subtitle {
-    @extend .font-weight-bold;
-    @extend .text-uppercase;
-    color: #c9cccf;
-    letter-spacing: 1.2px;
 }
