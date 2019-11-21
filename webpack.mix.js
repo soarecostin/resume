@@ -9,6 +9,6 @@ mix
     .tailwind()
     .purgeCss({
         enabled: true,
-        extensions: ['htm', 'html', 'js', 'php', 'vue'],        
+        extensions: ['htm', 'html', 'js', 'php', 'vue'],
         folders: ['public'],
     });
